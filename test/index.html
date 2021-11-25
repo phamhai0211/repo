@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let a = [2, 4, 5, 2, 3, 4, 5]
+
+        let b = a.filter(
+            value => {
+                if (value % 2 == 0) {
+                    return true
+                } return false
+            }
+        ).reduce((tong, value, index, arr) => {
+            return tong += value
+        }, 0)
+        console.log(b)
+
+        let c = a.sort((c,d)=>{
+            if(d>c){
+                return -1
+            }return 1
+        })
+        let result = [...new Set(c)]
+        console.log(result[result.length-3])
+        var domain = () =>{
+            return [
+                'daihai',
+                'thanh ngan'
+            ]
+        }
+        let [x,y]= domain()
+        console.log(x)
+    </script>
+</body>
+
+</html>

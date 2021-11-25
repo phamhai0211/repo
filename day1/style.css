@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root{
+    --prime_color:#4daf55;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins",sans-serif;
+    height: 100vh;
+    background-image: linear-gradient(to right,#4daf54,#3d8880);
+    overflow: hidden;
+}
+.card{
+    margin:120px auto;
+    width: 320px;
+    height: 400px;
+    background-color: #232839;
+    border-radius: 15px;
+    color:white;
+    padding: 40px 20px;
+    position: relative;
+}
+.img__card{
+    width: 90%;
+    transition: .5s;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.card:hover .img__card{
+    transform: translateY(-90px) rotate(-20deg);
+}
+.card__title{
+    color: var(--prime_color);
+    text-align: center;
+    transition: .5s;
+}
+.card__price{
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    transition: .5s;
+}
+.card:hover .card__title{
+    transform:translate(-40px, -72px ) ;
+}
+.card:hover .card__price{
+    transform: translate(-112px, -72px);
+}
+.size,
+.select__color,
+.card__action{
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+ .size{
+    margin-top: 100px;
+}
+.card:hover .size{
+    margin-top: -30px;
+}
+.card:hover .size,
+.card:hover .select__color,
+.card:hover .card__action{
+    transition-delay: .3s;
+    opacity: 1;
+    visibility: visible;
+}
+.size,.select__color{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
